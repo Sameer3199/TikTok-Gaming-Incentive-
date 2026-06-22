@@ -144,3 +144,95 @@ body{
     }
 
 }
+
+:root{
+ --bg:#eef6ff;
+ --card:rgba(255,255,255,.82);
+ --text:#1d2939;
+ --primary:#6d5dfc;
+ --secondary:#00c2a8;
+ --banner:#6d5dfc;
+ --video:#e9fff7;
+}
+body{
+ background:linear-gradient(135deg,#eef6ff,#dff4ff,#f8edff)!important;
+ color:var(--text)!important;
+ transition:.45s;
+}
+.hero,.rules{
+ background:var(--card)!important;
+ backdrop-filter:blur(10px);
+ border-radius:22px;
+ box-shadow:0 12px 35px rgba(0,0,0,.08);
+}
+.notice,.course-info,.rules h2{
+ background:linear-gradient(90deg,var(--primary),var(--secondary))!important;
+}
+.video-box{
+ background:linear-gradient(135deg,#d8fff1,#e7f2ff)!important;
+ border-radius:18px;
+}
+.start-text h2{color:var(--primary)!important;}
+.theme-switch{
+ position:fixed;top:20px;right:20px;z-index:9999;
+ width:74px;height:38px;
+}
+.theme-switch input{display:none;}
+.slider{
+ position:absolute;inset:0;
+ background:linear-gradient(90deg,#7c5cff,#00c2a8);
+ border-radius:999px;cursor:pointer;
+ box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+.slider:before{
+ content:"";
+ position:absolute;left:4px;top:4px;
+ width:30px;height:30px;border-radius:50%;
+ background:#fff;
+ transition:.35s;
+}
+.sun,.moon{
+ position:absolute;top:9px;font-size:14px;
+}
+.sun{left:10px}
+.moon{right:10px}
+#themeToggle:checked + .slider:before{transform:translateX(36px);}
+body.dark{
+ --bg:#0b1220;
+ --card:rgba(20,28,48,.88);
+ --text:#eef6ff;
+ --primary:#ff7a18;
+ --secondary:#ffb800;
+}
+body.dark{
+ background:linear-gradient(135deg,#0b1220,#1d3557,#241b4b)!important;
+}
+body.dark .notice,
+body.dark .course-info,
+body.dark .rules h2{
+ background:linear-gradient(90deg,#ff7a18,#ffb800)!important;
+}
+body.dark .video-box{
+ background:linear-gradient(135deg,#2b2d42,#334155)!important;
+}
+body.dark .hero,
+body.dark .rules,
+body.dark .course-info,
+body.dark .start-text,
+body.dark .video-box a,
+body.dark .welcome{color:var(--text)!important;}
+
+
+/* Falling Confetti Effect */
+.confetti{
+    position:fixed;
+    top:-30px;
+    animation:fall linear infinite;
+    z-index:999;
+    pointer-events:none;
+}
+
+@keyframes fall{
+    0%{transform:translateY(-100px) rotate(0deg);}
+    100%{transform:translateY(110vh) rotate(720deg);}
+}
