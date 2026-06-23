@@ -223,16 +223,3 @@ body.dark .video-box a,
 body.dark .welcome{color:var(--text)!important;}
 
 
-/* Falling Confetti Effect */
-.confetti{
-    position:fixed;
-    top:-30px;
-    animation:fall linear infinite;
-    z-index:999;
-    pointer-events:none;
-}
-
-@keyframes fall{
-    0%{transform:translateY(-100px) rotate(0deg);}
-    100%{transform:translateY(110vh) rotate(720deg);}
-}

@@ -27,7 +27,7 @@
 <section class="start-section">
 <div class="video-box">
 <a href="https://drive.google.com/file/d/1B6ndzqGi0KQv4_lZVWkUNx3Ef-jN9Z63/view?usp=sharing" target="_blank">
-                Click Here to Watch Introduction Video
+               Click Here to Watch Introduction Video
             </a>
 </div>
 <div class="start-text">
@@ -80,24 +80,7 @@ t.addEventListener('change',()=>{
  localStorage.setItem('theme',t.checked?'dark':'light');
 });
 </script>
-<script>
-let colors=[
-"#ff0054","#00f5d4","#fee440",
-"#9b5de5","#f15bb5","#ffffff","#ff8500"
-];
 
-for(let i=0;i<150;i++){
-    let c=document.createElement("div");
-    c.className="confetti";
-    c.style.left=Math.random()*100+"vw";
-    c.style.background=colors[Math.floor(Math.random()*colors.length)];
-    c.style.width=(5+Math.random()*15)+"px";
-    c.style.height=(10+Math.random()*25)+"px";
-    c.style.animationDuration=(3+Math.random()*6)+"s";
-    c.style.animationDelay=Math.random()*5+"s";
-    document.body.appendChild(c);
-}
-</script>
 
 </body>
 </html>
